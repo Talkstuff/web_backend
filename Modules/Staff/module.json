@@ -1,0 +1,7 @@
+{
+    "name": "Staff",
+    "slug": "staff",
+    "version": "1.0",
+    "description": "the staff management module for this system",
+    "refId" : 200
+}

@@ -1,0 +1,9 @@
+{
+  "/themes/controlPanel/views/users/users.js": "/themes/controlPanel/views/users/users.js",
+  "/themes/controlPanel/views/app/app.min.js": "/themes/controlPanel/views/app/app.min.js",
+  "/themes/controlPanel/views/security/security.min.js": "/themes/controlPanel/views/security/security.min.js",
+  "/themes/controlPanel/views/security/login.min.js": "/themes/controlPanel/views/security/login.min.js",
+  "/build/app.min.css": "/build/app.min.css",
+  "/build/site.min.css": "/build/site.min.css",
+  "/themes/controlPanel/assets/js/run.min.js": "/themes/controlPanel/assets/js/run.min.js"
+}

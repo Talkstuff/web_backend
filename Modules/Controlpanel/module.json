@@ -1,0 +1,7 @@
+{
+    "name": "Controlpanel",
+    "slug": "controlpanel",
+    "version": "1.0",
+    "description": "this module serves as the entry point to the system's control management area. this module is restricted to selected staffs",
+    "refId" : 2000
+}

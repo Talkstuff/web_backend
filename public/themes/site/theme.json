@@ -1,0 +1,8 @@
+{
+  "slug": "control-panel",
+  "name": "controlPanel",
+  "author": "talkstuff",
+  "description": "App Theme",
+  "version": "1.0.0",
+  "type" : "backend"
+}

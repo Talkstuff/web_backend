@@ -1,0 +1,7 @@
+{
+    "name": "Core",
+    "slug": "core",
+    "version": "1.0",
+    "description": "this is the core of the talkstuff system",
+    "refId" : 1000
+}

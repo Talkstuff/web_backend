@@ -1,0 +1,7 @@
+{
+    "name": "Site",
+    "slug": "site",
+    "version": "1.0",
+    "description": "this is the frontend website of the talkstuff platform",
+    "refId" : 10000
+}

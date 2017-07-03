@@ -1,0 +1,22 @@
+.app-menu li a {
+    padding: 10px 15px;
+}
+.app-menu li.uk-active a {
+    color: black !important;
+}
+.login-overlay {
+    opacity: 0.8;
+}
+.main_logo_wrapper {
+    border-radius: 50%;
+    border: solid darkblue;
+    padding: 8px;
+    height: 125px;
+    width: 125px;
+}
+.app-menu li a {
+    padding: 10px 15px;
+}
+.app-menu li.uk-active a {
+    color: black !important;
+}

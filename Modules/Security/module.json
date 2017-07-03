@@ -1,0 +1,7 @@
+{
+    "name": "Security",
+    "slug": "security",
+    "version": "1.0",
+    "description": "security module to authenticate logins to restricted areas of the system",
+    "refId" : 100
+}

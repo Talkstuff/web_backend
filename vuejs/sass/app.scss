@@ -1,0 +1,101 @@
+@import 'util.scss';
+
+.fg-ts,.fg-hover-ts:hover {
+  color: #ff6600 !important;
+}
+
+.bd-ts {
+  border-color: #ff6600 !important;
+}
+
+.bg-ts, .bg-hover-ts:hover {
+  color: white;
+  background-color: #ff6600 !important;
+}
+
+.login-overlay {
+  opacity: 0.8;
+}
+
+.app-sidebar-name-wrapper {
+  line-height: 80px;
+  font-size: 1.5em;
+  color: white;
+}
+.main_logo_wrapper {
+  border-radius: 50%;
+  border: solid black;
+  padding: 8px;
+  height: 105px;
+  width: 105px;
+}
+.nav-main {
+  ul {
+    a {
+      padding-left: 8px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  a {
+    i {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.app-menu {
+  &>li {
+    a {
+      padding: 10px 15px;
+
+      &:hover {
+        background-color: #3e98ca;
+      }
+    }
+
+
+  }
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: $ts_color;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+}
