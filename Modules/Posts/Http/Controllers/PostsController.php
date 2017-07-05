@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Modules\Posts\Events\PostStatusWasToggled;
+use Modules\Posts\Jobs\PostLikeStatusRedisNotification;
 use Modules\Posts\Repositories\PostRepository;
 use Modules\Posts\Transformers\PostTransformer;
 use Modules\Users\Transformers\CommentTransformer;
@@ -44,6 +46,9 @@ class PostsController extends Controller
         $likeStatus = $user ? $user->pivot->status : false;
 
         $post->userLikes()->syncWithoutDetaching([$user_id => ['status' => !$likeStatus]]);
+
+        // trigger event: PostLikeStatusWasToggled
+        dispatch((new PostLikeStatusRedisNotification($post, $user_id))->onConnection('redis'));
 
         return transform($post, new PostTransformer($user_id));
     }

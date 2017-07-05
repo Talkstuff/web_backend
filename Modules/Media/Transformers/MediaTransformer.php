@@ -8,7 +8,6 @@
 
 namespace Modules\Media\Transformers;
 
-
 use League\Fractal\TransformerAbstract;
 use Modules\Media\Models\Media;
 
@@ -25,6 +24,12 @@ class MediaTransformer extends TransformerAbstract
             'metadata' => $media->metadata,
             'downloads' => $media->downloads,
             'type' => $media->getMediaType(),
+            'views' => $media->views,
+            'shares' => $media->shares,
+            'likes' => $media->likes,
+            'dislikes' => $media->dislikes,
+            'category'=>$media->categories,
+            'comments'=>$media->mediaComments,
         ];
     }
 

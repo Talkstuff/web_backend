@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Notifications\Providers;
+namespace Modules\Wallet\Providers;
 
 use Caffeinated\Modules\Support\ServiceProvider;
 
@@ -13,9 +13,9 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__.'/../Resources/Lang', 'notifications');
-        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'notifications');
-        $this->loadMigrationsFrom(__DIR__.'/../Database/Migrations', 'notifications');
+        $this->loadTranslationsFrom(__DIR__.'/../Resources/Lang', 'wallet');
+        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'wallet');
+        $this->loadMigrationsFrom(__DIR__.'/../Database/Migrations', 'wallet');
     }
 
     /**
@@ -25,7 +25,6 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(EventServiceProvider::class);
         $this->app->register(RouteServiceProvider::class);
     }
 }

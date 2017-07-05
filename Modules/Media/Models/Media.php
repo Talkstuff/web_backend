@@ -66,4 +66,13 @@ class Media extends Model
                 return 'Music';
         }
     }
+
+    public function mediaComments(){
+        return $this->hasMany(MediaComment::class,'media_id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class,'user_id');
+    }
 }
+

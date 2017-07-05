@@ -7,6 +7,7 @@ use App\Console\Commands\RectifyUserConnections;
 use App\Console\Commands\SyncCastingDB;
 use App\Console\Commands\SyncOldDB;
 use App\Console\Commands\SyncTalktalkDB;
+use App\Console\Commands\TestSupervisor;
 use App\Console\Commands\UninstallSystem;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -25,6 +26,7 @@ class Kernel extends ConsoleKernel
         SyncCastingDB::class,
         RectifyUserConnections::class,
         SyncTalktalkDB::class,
+        TestSupervisor::class,
     ];
 
     /**
@@ -37,6 +39,8 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('inspire')
                   ->everyTenMinutes();
+        $schedule->command('app:test-supervisor')->everyMinute();
+
     }
 
     /**

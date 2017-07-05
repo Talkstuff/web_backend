@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Modules\Security\Jobs\ForgotPasswordJob;
 use Modules\Security\Mail\ForgotPassword;
 use Modules\Users\Models\User;
 use Modules\Users\Repositories\UsersRepository;
@@ -177,7 +178,7 @@ class LoginController extends Controller
 
         $user = app(UsersRepository::class)->findByEmail($email);
 
-        \Mail::send(new ForgotPassword($user));
+        dispatch((new ForgotPasswordJob($user))->onConnection('redis'));
 
         return response()->json([$email]);
     }

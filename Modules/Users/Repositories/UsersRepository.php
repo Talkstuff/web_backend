@@ -313,4 +313,8 @@ class UsersRepository
         ;
 
     }
+
+    public function getUserWallets($id){
+        return $this->findById($id)->wallets()->get();
+    }
 }

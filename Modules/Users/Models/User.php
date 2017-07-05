@@ -5,12 +5,17 @@ namespace Modules\Users\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Modules\Media\Models\Media;
 use Modules\Posts\Models\Post;
 use Modules\Security\Models\Role;
+use Modules\Wallet\Models\Wallet;
 
 
 class User extends Authenticatable
 {
+    use Notifiable;
+
     protected $table = 'users';
 
     protected $guarded = ['id'];
@@ -142,5 +147,13 @@ class User extends Authenticatable
     {
         // todo:: gets all permissions for this staff
         return [];
+    }
+
+    public function wallets(){
+        return $this->hasMany(Wallet::class,'user_id');
+    }
+
+    public function medias(){
+        return $this->hasMany(Media::class,'user_id');
     }
 }

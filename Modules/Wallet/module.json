@@ -1,0 +1,7 @@
+{
+    "name": "wallet",
+    "slug": "wallet",
+    "version": "1.0",
+    "description": "This is the description for the Wallet module.",
+    "refId" : 5000
+}
