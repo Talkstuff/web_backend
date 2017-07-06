@@ -7,13 +7,13 @@ use Illuminate\Database\Migrations\Migration;
 class CreateMediaCommentTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. for the media comments table
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('media-comments', function (Blueprint $table) {
+        Schema::create('media_comments', function (Blueprint $table) {
             $table->increments('id');
 
             $table->integer('media_id')->unsigned();
@@ -37,6 +37,6 @@ class CreateMediaCommentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('media-comments');
+        Schema::dropIfExists('media_comments');
     }
 }

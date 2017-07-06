@@ -14,7 +14,7 @@ use Modules\Media\Models\Media;
 
 class MediaComment extends Model
 {
-    protected $table = 'media-comments';
+    protected $table = 'media_comments';
 
     protected $guarded = ['id'];
 
