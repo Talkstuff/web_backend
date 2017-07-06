@@ -27,7 +27,7 @@ class CreateAfrApicantsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->integer('type')->unsigned();
+            $table->integer('type_id')->unsigned();
             $table->foreign('type_id')->references('id')->on('afr_application_types')->onDelete('cascade');
 
             $table->string('name');
@@ -65,6 +65,6 @@ class CreateAfrApicantsTable extends Migration
     {
         Schema::dropIfExists('afr_votes');
         Schema::dropIfExists('afr_applicants');
-        Schema::dropIfExists('afr_application_type');
+        Schema::dropIfExists('afr_application_types');
     }
 }

@@ -68,13 +68,15 @@ class FilesRepository
 
         if(!$file) $file = request()->file('file');
 
-        if($fileName) {
-            $path = $file->storeAs($uploadPath, $fileName . '.' . $file->clientExtension(),$this->getDiskName());
-        } else {
-            $path = $file->store($uploadPath, $this->getDiskName());
+        if($file){
+            if(!$fileName) $fileName = str_random(18);
+
+            $path = $file->storeAs($uploadPath, $fileName . '.' . $file->getClientOriginalExtension(),$this->getDiskName());
+
+            return $this->explorer->url('uploads/' . $path);
         }
 
-        return $this->explorer->url('uploads/' . $path);
+        return ;
     }
 
     public function deleteFile($file_path)

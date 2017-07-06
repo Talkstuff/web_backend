@@ -10,6 +10,7 @@ use Modules\Posts\Transformers\PostTransformer;
 use Modules\Security\Models\User;
 use Modules\Users\Repositories\UsersRepository;
 use Modules\Users\Transformers\UsersTransformer;
+use Modules\Wallet\Transformers\WalletTransformer;
 
 class UsersController extends Controller
 {
@@ -205,5 +206,10 @@ class UsersController extends Controller
         $friends = $this->usersRepository->searchFriends($id, $query);
 
         return transform($friends, new UsersTransformer());
+    }
+
+    public function getUserWallets($id){
+        $wallets=$this->usersRepository->getUserWallets($id);
+        return transform($wallets, new WalletTransformer());
     }
 }

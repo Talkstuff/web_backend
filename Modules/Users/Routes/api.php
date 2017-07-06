@@ -19,6 +19,7 @@ Route::group(['prefix'=>'users'], function (){
     Route::post('save-group','UsersController@saveGroup');
     Route::get('{query}/search','UsersController@searchUsers');
     Route::post('update-basic-profile','UsersProfileController@updateUserBasicProfile');
+    Route::get('{user_id}/wallets','UsersController@getUserWallets');
 
     Route::get('{user_id}/start-up-friends','UsersController@getStartUpFriends');
     Route::get('find-username/{username}','UsersController@getUserByUsername');
